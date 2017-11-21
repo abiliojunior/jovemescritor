@@ -2,7 +2,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   
   def hello
-      render html: "Ola Mundo"
+      render html: "VK é uma gatinha com mel"
   end
     
 end
