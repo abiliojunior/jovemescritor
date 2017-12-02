@@ -1,0 +1,32 @@
+<%= form_with(model: cena, local: true) do |form| %>
+  <% if cena.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(cena.errors.count, "error") %> prohibited this cena from being saved:</h2>
+
+      <ul>
+      <% cena.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :titulo %>
+    <%= form.text_field :titulo, id: :cena_titulo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :conteudo %>
+    <%= form.text_area :conteudo, id: :cena_conteudo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :capitulo_id %>
+    <%= form.number_field :capitulo_id, id: :cena_capitulo_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

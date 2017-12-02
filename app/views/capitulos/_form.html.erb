@@ -1,0 +1,27 @@
+<%= form_with(model: capitulo, local: true) do |form| %>
+  <% if capitulo.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(capitulo.errors.count, "error") %> prohibited this capitulo from being saved:</h2>
+
+      <ul>
+      <% capitulo.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :titulo %>
+    <%= form.text_field :titulo, id: :capitulo_titulo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :projeto_id %>
+    <%= form.number_field :projeto_id, id: :capitulo_projeto_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

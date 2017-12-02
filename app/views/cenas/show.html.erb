@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Titulo:</strong>
+  <%= @cena.titulo %>
+</p>
+
+<p>
+  <strong>Conteudo:</strong>
+  <%= @cena.conteudo %>
+</p>
+
+<p>
+  <strong>Capitulo:</strong>
+  <%= @cena.capitulo_id %>
+</p>
+
+<%= link_to 'Edit', edit_cena_path(@cena) %> |
+<%= link_to 'Back', cenas_path %>

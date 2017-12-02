@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  titulo: MyString
+  conteudo: MyText
+  capitulo_id: 1
+
+two:
+  titulo: MyString
+  conteudo: MyText
+  capitulo_id: 1
