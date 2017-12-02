@@ -15,13 +15,13 @@ class ProjetosControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
-  test "should create projeto" do
-    assert_difference('Projeto.count') do
-      post projetos_url, params: { projeto: { descricao: @projeto.descricao, nome: @projeto.nome, usuario_id: @projeto.usuario_id } }
-    end
+  # test "should create projeto" do
+  #   assert_difference('Projeto.count') do
+  #     post projetos_url, params: { projeto: { descricao: @projeto.descricao, nome: @projeto.nome, usuario_id: @projeto.usuario_id } }
+  #   end
 
-    assert_redirected_to projeto_url(Projeto.last)
-  end
+  #   assert_redirected_to projeto_url(Projeto.last)
+  # end
 
   test "should show projeto" do
     get projeto_url(@projeto)
@@ -33,10 +33,10 @@ class ProjetosControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
-  test "should update projeto" do
-    patch projeto_url(@projeto), params: { projeto: { descricao: @projeto.descricao, nome: @projeto.nome, usuario_id: @projeto.usuario_id } }
-    assert_redirected_to projeto_url(@projeto)
-  end
+  # test "should update projeto" do
+  #   patch projeto_url(@projeto), params: { projeto: { descricao: @projeto.descricao, nome: @projeto.nome, usuario_id: @projeto.usuario_id } }
+  #   assert_redirected_to projeto_url(@projeto)
+  # end
 
   test "should destroy projeto" do
     assert_difference('Projeto.count', -1) do
