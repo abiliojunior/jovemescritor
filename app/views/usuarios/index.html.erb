@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Usuários</h1>
+<h1>Usuarios</h1>
 
 <table>
   <thead>
@@ -14,11 +14,11 @@
   <tbody>
     <% @usuarios.each do |usuario| %>
       <tr>
-        <td><%= usuario.name %></td>
+        <td><%= usuario.nome %></td>
         <td><%= usuario.email %></td>
         <td><%= link_to 'Show', usuario %></td>
-        <td><%= link_to 'Editar', edit_usuario_path(usuario) %></td>
-        <td><%= link_to 'Deletar', usuario, method: :delete, data: { confirm: 'Tem certeza??' } %></td>
+        <td><%= link_to 'Edit', edit_usuario_path(usuario) %></td>
+        <td><%= link_to 'Destroy', usuario, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -26,4 +26,4 @@
 
 <br>
 
-<%= link_to 'Novo Usuario', new_usuario_path %>
+<%= link_to 'New Usuario', new_usuario_path %>
