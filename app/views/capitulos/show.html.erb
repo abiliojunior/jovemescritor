@@ -1,14 +1,45 @@
 <p id="notice"><%= notice %></p>
+<% provide(:title, @capitulo.titulo) %>
+<div class="row">
+  <aside class="col-md-4">
+    <section class="user_info">
+  <h1><%= @capitulo.titulo %></h1>
+</section>
+  </aside>
+</div>
 
-<p>
-  <strong>Titulo:</strong>
-  <%= @capitulo.titulo %>
-</p>
+ <div class="col-md-8">
+    
+      <h3>Cenas</h3>
+      
+     <table class="table table-bordered table-dark">
+  <thead>
+    <tr>
+      <th scope="col">Ordem</th>
+      <th scope="col">Titulo</th>
+      <th scope="col">Palavras</th>
+      <th scope="col">Editar</th>
+      <th scope="col">Desce</th>
+      <th scope="col">Sobe</th>
+    </tr>
+  </thead>
+  <tbody>
+       <% @capitulo.cenas.each_with_index  do |cena, index| %>
+    <tr>
+      <th scope="row"><%= index+1 %></th>
+      <td><%= cena.titulo %></td>
+      <td><%= [*800..1200].sample %></td>
+        <td><%= link_to 'Editar', edit_cena_path(cena) %></td>
+      <td>Desce</td>
+      <td>Sobe</td>
+    </tr>
+     <% end %>
+   
+  </tbody>
+</table>
+<%= link_to 'Nova Cena', new_cena_path, class:"btn btn-primary" %>
+     
+     
+    
+ </div>
 
-<p>
-  <strong>Projeto:</strong>
-  <%= @capitulo.projeto_id %>
-</p>
-
-<%= link_to 'Edit', edit_capitulo_path(@capitulo) %> |
-<%= link_to 'Back', capitulos_path %>

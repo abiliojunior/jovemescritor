@@ -1,6 +1,17 @@
-<h1>Editing Cena</h1>
+<% provide(:title, 'Editarndo a cena') %>
+<h1>Editarndo a cena</h1>
 
-<%= render 'form', cena: @cena %>
+<div class="row">
+  <div class="col">
+    <%= form_for(@cena) do |c| %>
+      <%= c.text_field :titulo, class: "form-control form-control-lg" %>
 
-<%= link_to 'Show', @cena %> |
-<%= link_to 'Back', cenas_path %>
+      <%= c.text_area:conteudo,  class:"form-control", rows:"20"  %>
+
+      <%= c.submit "Salvar Cena", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
+
+
+<%= link_to 'Voltar', cenas_path %>

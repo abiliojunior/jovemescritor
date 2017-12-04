@@ -1,13 +1,98 @@
-<div class="center jumbotron">
-  <h1>Welcome to the Sample App</h1>
+<div class="jumbotron">
+  <h1>Bem vindo ao Aplicativo Jovem Escritor</h1>
 
   <h2>
-    This is the home page for the
-    <a href="https://jovemescritor-abiliojunior.c9users.io/">Ruby on Rails Tutorial</a>
-    sample application.
-  </h2>
-
-  <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
+    Este aplicativo foi desenvolvido como parte da Disciplina de informatica Educativa </h2>
+    <b>Nome: </b>Abilio Costa da Silva junior </br>
+    <b>Matricula:</b>1724333</br></br>
+    
+    <div class="alert alert-success" role="alert">
+      <b>DADOS</b>
+      <ul>
+        <li>Em 2016 384.126 participantes escreveram mais de 50 mil palavras para um concurso de escrita;</li>
+        <li>Uma rede social de escritores possui mais de 400 Milhões de histórias;</li>
+        
+      </ul>
+     
+    </div>
+    
+     <div class="alert alert-danger" role="alert">
+      <b>DADOS</b>
+      <ul>
+        <li>40% é a proporçao de pessoas eliminadas de processos seletivos apenas por erros de ortografia;</li>
+        <li>Os alunos do ensino médio lideram negativamente o ranking, com pior resultado nos testes ortográficos;</li>
+        <li>55% dos alunos do 3º ano do ensino fundamental são analfabetos;</li>
+        
+      </ul>
+     
+    </div>
+    
+    <div>
+      <b>Premissa</b>
+      
+      </br>
+      "... A prática de leitura e, principalmente, o hábito de escrever suas ideias é um bom exercício para aprimorar a 
+      linguagem..." 
+      </br>
+      </br>
+      <b>Teoria</b>
+      
+      <ul>
+        <li>Aplicativo de apoio a escrita</li>
+        <li>Symout Paper acretitava que deveria ensiar matematica por meio da programação </li>
+        <li>O construcionismo  diz respeito à construção do conhecimento</li>
+        <li>ação concreta que resulta em um produto palpável,</li>
+        <li>desenvolvido com o concurso do computador,</li>
+        <li>que seja de interesse de quem o produz.</li>
+        
+      </ul>
+      
+    </div>
+    
+    <div>
+       <b>Tecnologias Utilizadas</b>
+      
+      <ul>
+        <li>Rubys On rail</li>
+        <li>Heroku</li>
+        <li>PostgreSQL</li>
+        <li>Bootstrap</li>
+        <li>Snowflake method (Livro sobre escrita)</li>
+        
+      </ul>
+       </br>
+      </br>
+      
+    </div>
+    
+     <div>
+       <b>O Que o sistema deve fazer?</b>
+      
+      <ul>
+        <li>Guiar a escrita de um livro do inicio ao fim</li>
+        <li>Apoiar etapas de criaçao</li>
+        <li>Sugerir Correçoes gramaticais?</li>
+        
+        
+      </ul>
+       </br>
+      </br>
+      
+    </div>
+    
+     <div class="media">
+ 
+  <div class="media-body">
+    <h5 class="mt-0">TO-DO's/Issues</h5>
+     <%= link_to image_tag("GitHub.png"),
+            'https://github.com/abiliojunior/jovemescritor' %>
+    <a href="https://github.com/abiliojunior/jovemescritor">Github<a></a>
+  </div>
+</div>
+  
+  
+</br>
+  <%= link_to "Cadastre-se", signup_path, class: "btn btn-lg btn-primary" %>
 </div>
 
 <%= link_to image_tag("logo.png", alt: "logo"),

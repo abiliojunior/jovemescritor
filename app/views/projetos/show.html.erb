@@ -1,19 +1,24 @@
+<!--SHOW DOS PROJETOS ESTA PAGINA TEM QUEMOSTRA OS CAPITULOS-->
 <p id="notice"><%= notice %></p>
+<% provide(:title, @projeto.nome) %>
+<div class="row">
+  <aside class="col-md-4">
+    <section class="user_info">
+  <h1><%= @projeto.nome %></h1>
+</section>
+  </aside>
+</div>
 
-<p>
-  <strong>Nome:</strong>
-  <%= @projeto.nome %>
-</p>
-
-<p>
-  <strong>Descricao:</strong>
-  <%= @projeto.descricao %>
-</p>
-
-<p>
-  <strong>Usuario:</strong>
-  <%= @projeto.usuario_id %>
-</p>
-
-<%= link_to 'Edit', edit_projeto_path(@projeto) %> |
-<%= link_to 'Back', projetos_path %>
+ <div class="col-md-8">
+    
+      <h3>Capitulos</h3>
+       
+     <ul class="list-group">
+        <% @projeto.capitulos.each do |capitulo| %>
+        <%= link_to capitulo.titulo, capitulo, class:"list-group-item" %>
+       <% end %>
+    </ul>
+    
+    
+ </div>
+ <%= link_to 'Novo Capitulo', new_capitulo_path, type:"button", class:"btn btn-primary" %>

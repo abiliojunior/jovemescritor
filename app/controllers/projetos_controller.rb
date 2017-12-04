@@ -1,15 +1,16 @@
 class ProjetosController < ApplicationController
   before_action :set_projeto, only: [:show, :edit, :update, :destroy]
-
   # GET /projetos
   # GET /projetos.json
   def index
     @projetos = Projeto.all
+    
   end
 
   # GET /projetos/1
   # GET /projetos/1.json
   def show
+  
   end
 
   # GET /projetos/new

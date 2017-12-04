@@ -13,9 +13,14 @@
     <%= render 'layouts/header' %>
     <div class="container">
       <%= yield %>
-      <%= render 'layouts/footer' %>
     </div>
-  </body>
+    </br>
+    <div>
+        <%= render 'layouts/footer' %>
+      <%= debug(params) if Rails.env.development? %>
+    </div>
+      
+      </body>
 </html>
 
-<img alt="Rails logo" src="/assets/rails-9308b8f92fea4c19a3a0d8385b494526.png" />
+<!--<img alt="Rails logo" src="/assets/rails-9308b8f92fea4c19a3a0d8385b494526.png" />-->
